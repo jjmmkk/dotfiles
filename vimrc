@@ -17,6 +17,7 @@ set nowrap
 
 " Indenting: 4 spaces, no tabs
 set autoindent
+" Uncomment line below when working with makefiles
 set expandtab
 set shiftwidth=4
 set tabstop=4
