@@ -1,0 +1,27 @@
+[user]
+    name = Jon-Morten Kristiansen
+    email = jon.morten.kristiansen@gmail.com
+[alias]
+    a = add
+    br = branch
+    ci = commit
+    co = checkout
+    di = diff
+    l = log
+    ls = log --format="%C(bold\\ cyan)(%h)%C(bold\\ red)%d\\ %C(reset)%C(blue)(%an,\\ %cd)%n%C(reset)%s%n"
+    less = log -p --
+    s = status -sb
+    st = status
+    tree = log --graph --format="%C(cyan)(%h)%C(red)%d\\ %C(blue)(%an,\\ %cd)%n%C(reset)%s%n"
+[color]
+    ui = auto
+[color "branch"]
+    current = bold cyan
+    local = cyan
+    remote = blue
+[color "interactive"]
+    prompt = bold cyan
+[core]
+    editor = vim
+[push]
+    default = current
