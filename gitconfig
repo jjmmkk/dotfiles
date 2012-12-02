@@ -24,5 +24,6 @@
     prompt = bold cyan
 [core]
     editor = vim
+	excludesfile = ~/.gitignore
 [push]
     default = current
