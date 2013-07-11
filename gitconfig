@@ -11,6 +11,7 @@
     ls = log --format="%C(bold\\ cyan)(%h)%C(bold\\ red)%d\\ %C(reset)%C(blue)(%an,\\ %cd)%n%C(reset)%s%n"
     less = log -p --
     s = status -sb
+    sm = submodule
     st = status
     tree = log --graph --format="%C(cyan)(%h)%C(red)%d\\ %C(blue)(%an,\\ %cd)%n%C(reset)%s%n"
     uci = reset --soft HEAD^
@@ -24,6 +25,6 @@
     prompt = bold cyan
 [core]
     editor = vim
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 [push]
     default = current
