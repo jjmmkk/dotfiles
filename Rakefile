@@ -24,16 +24,13 @@ task :default => [:help]
 
 
 task :help do
-	STDOUT.puts('Usage:')
-	STDOUT.puts("\trake copy")
-	STDOUT.puts("\t\tWill attempt to copy files in directory 'files' to your home folder")
-	STDOUT.puts("\trake append")
-	STDOUT.puts("\t\tWill append contents of files in directory 'files' to corresponding files your home folder")
+	STDOUT.puts(`rake -D`)
 end
 
 
-task :copy do
-	home = ENV['HOME']
+desc 'Will attempt to copy files in directory "files" to your home folder'
+task :copy, :home_override do |t, args|
+	home = args[:home_override] || ENV['HOME']
 	STDOUT.puts("Using home folder #{home}\n\n")
 
 	paths = Dir['files/*']
@@ -55,8 +52,10 @@ task :copy do
 	end
 end
 
-task :append do
-	home = ENV['HOME']
+
+desc "Will append contents of files in directory 'files' to corresponding files your home folder"
+task :append, :home_override do |t, args|
+	home = args[:home_override] || ENV['HOME']
 	STDOUT.puts("Using home folder #{home}\n")
 
 	paths = Dir['files/*']
