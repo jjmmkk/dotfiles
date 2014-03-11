@@ -1,3 +1,11 @@
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Pattern "**" in pathname expansion will match all
+# files and zero or more directories and subdirectories
+shopt -s globstar
+
+# builtins
 alias ls='ls --color=auto'
 alias cgrep='grep --color=auto'
 alias h?='history | grep '
