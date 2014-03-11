@@ -3,10 +3,19 @@ shopt -s histappend
 
 # Pattern "**" in pathname expansion will match all
 # files and zero or more directories and subdirectories
-shopt -s globstar
+if [[ 4 = `echo $BASH_VERSION | cut -d '.' -f 1` ]]
+then
+	shopt -s globstar
+fi
 
 # builtins
-alias ls='ls --color=auto'
+if [[ 0 = `ls --color=auto &> /dev/null && echo "$?"` ]]
+then
+	alias ls='ls --color=auto'
+else
+	export CLICOLOR=1
+	export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+fi
 alias cgrep='grep --color=auto'
 alias h?='history | grep '
 
@@ -22,9 +31,10 @@ alias vu='vagrant up'
 # Prompt
 # Colors: Greyscale + green
 # Add current git branch
-if [ -f /etc/bash_completion ]
+_BASH_COMPLETION_PATH_PREFIX=$([[ 0 = `brew -v &> /dev/null && echo "$?"` ]] && echo -n `brew --prefix` || echo -n '')
+if [ -f "$_BASH_COMPLETION_PATH_PREFIX"'/etc/bash_completion' ]
 then
-	. /etc/bash_completion
+	. "$_BASH_COMPLETION_PATH_PREFIX"'/etc/bash_completion'
 	if [[ 0 = `git --version &> /dev/null && echo "$?"` ]]
 	then
 		export PS1='\[\033[01;30m\]\u@\h\[\033[00m\]:\w\[\033[01;32m\]$(__git_ps1)\[\033[00;37m\] $\[\033[00m\] '
