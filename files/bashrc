@@ -44,3 +44,17 @@ then
 else
 	echo 'Please install "bash-completion"'
 fi
+
+# vim dirs
+if [ ! -d "$HOME/.vim/tmp/undo" ]
+then
+	mkdir -p "$HOME/.vim/tmp/undo"
+fi
+if [ ! -d "$HOME/.vim/tmp/backup" ]
+then
+	mkdir -p "$HOME/.vim/tmp/backup"
+fi
+if [ ! -d "$HOME/.vim/tmp/swap" ]
+then
+	mkdir -p "$HOME/.vim/tmp/swap"
+fi
