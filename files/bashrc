@@ -1,2 +1,4 @@
-alias g='git'
+alias ls='ls --color=auto'
+alias cgrep='grep --color=auto'
 alias h?='history | grep '
+alias g='git'
