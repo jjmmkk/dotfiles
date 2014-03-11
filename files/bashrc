@@ -18,3 +18,19 @@ alias v='vagrant'
 alias vh='vagrant halt'
 alias vs='vagrant suspend'
 alias vu='vagrant up'
+
+# Prompt
+# Colors: Greyscale + green
+# Add current git branch
+if [ -f /etc/bash_completion ]
+then
+	. /etc/bash_completion
+	if [[ 0 = `git --version &> /dev/null && echo "$?"` ]]
+	then
+		export PS1='\[\033[01;30m\]\u@\h\[\033[00m\]:\w\[\033[01;32m\]$(__git_ps1)\[\033[00;37m\] $\[\033[00m\] '
+	else
+		echo 'Please install "git"'
+	fi
+else
+	echo 'Please install "bash-completion"'
+fi
