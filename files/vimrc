@@ -26,6 +26,8 @@ set autoindent
 set shiftwidth=4
 set smartindent
 set tabstop=4
+" Paste as-is
+set paste
 " Comment out line below when working with makefiles
 set expandtab
 
