@@ -4,6 +4,12 @@ set nocompatible
 " Show position of cursor
 set ruler
 
+" Highlight current line
+set cursorline
+
+" Enable mouse in all modes
+set mouse=a
+
 " Syntax highlighting if the terminal has colors
 if &t_Co > 2 || has("gui_running")
     syntax on
@@ -15,15 +21,29 @@ endif
 " Do not wrap lines
 set nowrap
 
-" Indenting: 4 spaces to a tab
+" Indentation
 set autoindent
-" Uncomment line below when working with makefiles
-"set expandtab
 set shiftwidth=4
+set smartindent
 set tabstop=4
+" Comment out line below when working with makefiles
+set expandtab
 
 " Command history
 set history=50
 
 " Display line numbers
 set number
+
+" Backup
+set backup
+set noswapfile
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+
+" Disable error bells
+set noerrorbells
+
+" Do not reset cursor to start of line when moving around
+set nostartofline
