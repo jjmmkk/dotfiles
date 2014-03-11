@@ -2,3 +2,8 @@ alias ls='ls --color=auto'
 alias cgrep='grep --color=auto'
 alias h?='history | grep '
 alias g='git'
+
+alias v='vagrant'
+alias vh='vagrant halt'
+alias vs='vagrant suspend'
+alias vu='vagrant up'
