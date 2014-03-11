@@ -9,8 +9,11 @@ shopt -s globstar
 alias ls='ls --color=auto'
 alias cgrep='grep --color=auto'
 alias h?='history | grep '
+
+# git
 alias g='git'
 
+# Vagrant
 alias v='vagrant'
 alias vh='vagrant halt'
 alias vs='vagrant suspend'
