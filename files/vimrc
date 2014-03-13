@@ -7,9 +7,6 @@ set ruler
 " Highlight current line
 set cursorline
 
-" Enable mouse in all modes
-set mouse=a
-
 " Syntax highlighting if the terminal has colors
 if &t_Co > 2 || has("gui_running")
     syntax on
