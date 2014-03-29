@@ -1,9 +1,6 @@
 " Use Vim settings instead of Vi settings
 set nocompatible
 
-" Show position of cursor
-set ruler
-
 " Highlight current line
 set cursorline
 
@@ -27,6 +24,9 @@ set tabstop=4
 set paste
 " Comment out line below when working with makefiles
 set expandtab
+
+" Show position of cursor
+set ruler
 
 " Command history
 set history=50
