@@ -60,7 +60,14 @@ then
 fi
 
 # User profile.d
-for script in `find "$HOME" -wholename '*profile.d/*' -type fl -maxdepth 2`
-do
-	. "$script"
-done
+if [ -d "$HOME"/.profile.d ]
+then
+	for script in `find "$HOME"/.profile.d -type f`
+	do
+		. "$script"
+	done
+	for script in `find "$HOME"/.profile.d -type l`
+	do
+		. "$script"
+	done
+fi
