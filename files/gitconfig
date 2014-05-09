@@ -10,9 +10,9 @@
     di = diff
     l = log
     less = log -p
-    ls = log --format="%C(black\\ bold)%h%C(reset)%C(cyan)%d\\ %C(reset)%C(black\\ bold)(%an,\\ %cd)%n%C(reset)%s%n"
-    sls = log --format="%C(black\\ bold)%h%C(reset)\\ %C(reset)%s"
-    tree = log --graph --format="%C(black\\ bold)%h%C(reset)%C(cyan)%d %C(black\\ bold)(%an,\\ %cd)%n%C(reset)%s%n"
+    ls = log --format=format:'%C(black bold)%h%C(reset)%C(cyan)%d %C(reset)%C(black bold)(%an, %cd)%n%C(reset)%s%n'
+    sls = log --format=format:'%C(black bold)%h%C(reset) %C(reset)%s'
+    tree = log --graph --format=format:'%C(black bold)%h%C(reset)%C(cyan)%d %C(black bold)(%an, %cd)%n%C(reset)%s%n'
     s = status -sb
     st = status
     sm = submodule
