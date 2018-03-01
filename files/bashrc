@@ -29,21 +29,13 @@ alias vs='vagrant suspend'
 alias vu='vagrant up'
 
 # Prompt
-# Colors: Greyscale + green
-# Add current git branch
-_BASH_COMPLETION_PATH_PREFIX=$([[ 0 = `brew -v &> /dev/null && echo "$?"` ]] && echo -n `brew --prefix` || echo -n '')
-if [ -f "$_BASH_COMPLETION_PATH_PREFIX"'/etc/bash_completion' ]
-then
-	. "$_BASH_COMPLETION_PATH_PREFIX"'/etc/bash_completion'
-	if [[ 0 = `git --version &> /dev/null && echo "$?"` ]]
-	then
-		export PS1='\[\033[01;30m\]\u@\h\[\033[00m\]:\w\[\033[01;32m\]$(__git_ps1)\[\033[00;37m\] $\[\033[00m\] '
-	else
-		echo 'Please install "git"'
-	fi
-else
-	echo 'Please install "bash-completion"'
-fi
+# 1. Add current git branch. See https://gist.github.com/joseluisq/1e96c54fa4e1e5647940
+# 2. Colors: Greyscale + green
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+#export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1='\[\033[01;30m\]\u@\h\[\033[00m\]:\w\[\033[01;32m\]$(parse_git_branch)\[\033[00;37m\] $\[\033[00m\] '
 
 # vim dirs
 if [ ! -d "$HOME/.vim/tmp/undo" ]
