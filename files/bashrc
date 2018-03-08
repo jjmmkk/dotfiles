@@ -19,15 +19,6 @@ fi
 alias cgrep='grep --color=auto'
 alias h?='history | grep '
 
-# git
-alias g='git'
-
-# Vagrant
-alias v='vagrant'
-alias vh='vagrant halt'
-alias vs='vagrant suspend'
-alias vu='vagrant up'
-
 # Prompt
 # 1. Add current git branch. See https://gist.github.com/joseluisq/1e96c54fa4e1e5647940
 # 2. Colors: Greyscale + green
@@ -36,6 +27,11 @@ parse_git_branch() {
 }
 #export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export PS1='\[\033[01;30m\]\u@\h\[\033[00m\]:\w\[\033[01;32m\]$(parse_git_branch)\[\033[00;37m\] $\[\033[00m\] '
+
+# 3. Autocomplete
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
 # vim dirs
 if [ ! -d "$HOME/.vim/tmp/undo" ]
