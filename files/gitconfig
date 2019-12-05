@@ -16,6 +16,8 @@
     s = status -sb
     st = status
     sm = submodule
+    taglog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    changelog = "!git log --pretty=format:'%s' --abbrev-commit --reverse `git describe --abbrev=0`..origin/master"
 [color]
     ui = auto
 [color "branch"]
