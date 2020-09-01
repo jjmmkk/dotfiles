@@ -12,6 +12,7 @@ ensure_link()
 ensure_link 'bash_profile'  '.bash_profile'
 ensure_link 'bashrc'        '.bashrc'
 ensure_link 'profile'       '.profile'
+ensure_link 'profile.d'     '.profile.d'
 
 # git
 ensure_link 'gitconfig'     '.gitconfig'

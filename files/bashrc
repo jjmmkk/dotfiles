@@ -50,11 +50,11 @@ fi
 # User profile.d
 if [ -d "$HOME"/.profile.d ]
 then
-	for script in `find "$HOME"/.profile.d -type f`
+	for script in `find "$HOME"/.profile.d/ -type f`
 	do
 		. "$script"
 	done
-	for script in `find "$HOME"/.profile.d -type l`
+	for script in `find "$HOME"/.profile.d/ -type l`
 	do
 		. "$script"
 	done

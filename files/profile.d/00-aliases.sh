@@ -1,6 +1,9 @@
 alias st='open -a "sublime text"'
 alias sc='open -a "visual studio code"'
 
+alias goo="open -a 'google chrome'"
+alias ff="open -a 'firefox'"
+
 alias g='git'
 alias ya='yarn'
 
