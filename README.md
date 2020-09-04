@@ -27,6 +27,25 @@ Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), for [zsh](https://www.z
 
 Install the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
 
+#### Git alises
+
+Some two-letter alises from the `git` plugin can be dangerous. Disable them in `~/.zshrc`, somewhere after `source $ZSH/oh-my-zsh.sh`:
+
+```
+unalias ga
+unalias gb
+unalias gc
+unalias gd
+unalias gf
+unalias gg
+unalias gk
+unalias gl
+unalias gl
+unalias gm
+unalias gp
+unalias gr
+```
+
 ### Link files
 
 ```
