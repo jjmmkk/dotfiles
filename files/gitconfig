@@ -29,6 +29,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+    pager = less -iXFR
 [push]
     default = current
 [branch]
