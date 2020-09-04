@@ -21,6 +21,12 @@ Optional packages:
 - `nvm`
 - `tree`
 
+### Oh My Zsh
+
+Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), for [zsh](https://www.zsh.org/).
+
+Install the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
+
 ### Link files
 
 ```
