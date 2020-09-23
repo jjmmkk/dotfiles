@@ -15,7 +15,6 @@ then
 fi
 
 # Profile dirs
-
 if [ -d "$HOME"/.zsh.profile.d ]
 then
 	for script in `find "$HOME"/.zsh.profile.d/ -type f`
