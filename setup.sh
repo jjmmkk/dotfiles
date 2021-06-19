@@ -19,6 +19,9 @@ ensure_link 'profile.d'     '.profile.d'
 ensure_link 'gitconfig'     '.gitconfig'
 ensure_link 'gitignore'     '.gitignore'
 
+# Jottacloud
+ensure_link 'jottaignore'   '.jottaignore'
+
 # vim
 ensure_link 'vimrc'         '.vimrc'
 

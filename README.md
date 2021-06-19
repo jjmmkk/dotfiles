@@ -60,3 +60,13 @@ See:
 
 - https://git-scm.com/book/en/Git-Basics-Tips-and-Tricks
 - https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+
+## Jottacloud
+
+Install [Jottacloud CLI](https://docs.jottacloud.com/en/articles/1436854-jottacloud-cli-for-macos).
+
+Set [.jottaignore](https://docs.jottacloud.com/en/articles/1437235-ignoring-files-and-folders-from-backup-with-jottacloud-cli) as global.
+
+```
+jotta-cli ignores set '~/.jottaignore'
+```
