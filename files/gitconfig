@@ -34,4 +34,6 @@
 [push]
     default = current
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
+[init]
+    defaultBranch = main
